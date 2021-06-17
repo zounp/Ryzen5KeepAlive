@@ -2,7 +2,7 @@
 
 # This program is meant to be ran in a Launcher (xfce) in the system tray
 
-highload=$(top -b -n1 | grep "Cpu(s)" | tr ',' '.' | awk '{printf "%0.1f", $2 + $4}')
+highload=$(top -b -n 1 | grep "Cpu(s)" | tr ',' '.' | awk '{printf "%0.1f", $2 + $4}')
 
 echo -e "Load:\n$highload"
 
