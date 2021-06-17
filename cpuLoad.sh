@@ -7,12 +7,13 @@ triggerload=5
 munberofcpus=1
 loadtimecpu=2 # seconds
 
-# the user load + the systemload accoring to top
+# the user load + the systemload according to top
 usersysload=$(top -b -n 1 | grep "Cpu(s)" | tr ',' '.' | awk '{printf "%0.1f", $2 + $4}')
 
 echo -e "Load:\n$usersysload"
 
-# Make sure the tray update period is 5 seconds or lager since stress runs for 2 seconds
+# In case of the default values make sure the tray update period
+# is larger then 2 seconds since stress runs for 2 seconds
 
 # Load the computer for $loadtimecpu seconds (default 2)
 # if the value of loadhigh is below $usersysload (default 5)
