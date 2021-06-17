@@ -6,6 +6,5 @@ This program is meant to be ran in a Launcher (xfce) in the system tray
 
 Dependencies: stress
 
-Make sure the tray update period is 5 seconds or more since the stress program runs for 2 seconds
-This program load's the computer for 2 seconds if the value of loadhigh (accumulated
-value of the two processes with the highest systemload) is below 5.
+Make sure the tray update period is 5 seconds or more since the stress program runs for 2 seconds.
+This program loads the computer for 2 seconds if the value of loadhigh is below 5.
