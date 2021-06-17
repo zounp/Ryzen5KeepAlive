@@ -10,8 +10,8 @@ Make sure the tray update period is 5 seconds or more since the stress program r
 This program loads the computer for 2 seconds if the value of loadhigh is below 5.
 
 Experiences:
-Freezes might be prevented with these settings:
+A freeze occurred with these settings:
 
-  triggerload=3
+  triggerload=5
 
   loadtimecpu=1
