@@ -12,6 +12,6 @@ This program loads the computer for 2 seconds if the value of loadhigh is below 
 Experiences:
 Freezes might be prevented with these settings:
 
-  usersysload=3
+  triggerload=3
 
   loadtimecpu=1
