@@ -8,3 +8,10 @@ Dependencies: stress
 
 Make sure the tray update period is 5 seconds or more since the stress program runs for 2 seconds.
 This program loads the computer for 2 seconds if the value of loadhigh is below 5.
+
+Experiences:
+Freezes might be prevented with these settings:
+
+  usersysload=3
+
+  loadtimecpu=1
