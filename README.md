@@ -1,4 +1,4 @@
-# Ryzen5KeepAlive-Repository
+# Ryzen5KeepAlive
 
 This program is meant to be ran in a Launcher (xfce) in the system tray
 
