@@ -1,14 +1,21 @@
 #! /bin/bash
 
+# This program is meant to prevent a processor from freezing caused by a too low cpu load
 # This program is meant to be ran in a Launcher (xfce) in the system tray
 
-highload=$(top -b -n 1 | grep "Cpu(s)" | tr ',' '.' | awk '{printf "%0.1f", $2 + $4}')
+triggerload=5
+munberofcpus=1
+loadtimecpu=2 # seconds
 
-echo -e "Load:\n$highload"
+# the user load + the systemload accoring to top
+usersysload=$(top -b -n 1 | grep "Cpu(s)" | tr ',' '.' | awk '{printf "%0.1f", $2 + $4}')
+
+echo -e "Load:\n$usersysload"
 
 # Make sure the tray update period is 5 seconds or lager since stress runs for 2 seconds
 
-# Load the computer for 2 seconds if the value of loadhigh is below 5
-if [[ $(echo $highload | cut -d '.' -f 1) -lt 5 ]]; then
-  stress --quiet --cpu 1 --timeout 2
+# Load the computer for $loadtimecpu seconds (default 2)
+# if the value of loadhigh is below $usersysload (default 5)
+if [[ $(echo $usersysload | cut -d '.' -f 1) -lt $triggerload ]]; then
+  stress --quiet --cpu $munberofcpus --timeout $loadtimecpu
 fi
