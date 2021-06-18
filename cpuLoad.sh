@@ -15,7 +15,7 @@ triggerload=5
 munberofcpus=1
 loadtimecpu=2 # seconds.
 
-# the user load + the systemload according to top.
+# The user load + the systemload according to top.
 usersysload=$(top -b -n 1 | grep 'Cpu(s)' | tr ',' '.' | awk '{printf "%0.1f", $2 + $4}')
 
 echo -e "Load:\\n$usersysload"
