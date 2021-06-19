@@ -10,7 +10,7 @@
 # In case of the default values make sure the generic monitor update period
 # is larger then 2 seconds since stress runs for 2 seconds.
 
-
+# These alues are still in the experimental stage. Try for your self what works for you.
 triggerload=5
 munberofcpus=1
 loadtimecpu=2 # seconds.
